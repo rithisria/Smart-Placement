@@ -60,3 +60,19 @@ Smart-Placement/
 │   └── src/
 │
 └── .gitignore
+## Project Screenshots
+
+### Login Page
+![Login Page](SP%20login%20page.jpeg)
+
+### Explore Roles
+![Explore Roles](SP%20explore%20roles.jpeg)
+
+### Job Application
+![Job Application](SP%20job%20applying.jpeg)
+
+### Application Tracker
+![Application Tracker](SP%20Application%20Tracker.jpeg)
+
+### Student Profile
+![Student Profile](SP%20Profile.jpeg)
