@@ -141,7 +141,7 @@ function App() {
       if (!response.ok) throw new Error(data.message || "Request failed");
       if (data.token) localStorage.setItem("placementToken", data.token);
       setUser(data.user);
-      setMessage(`Welcome, ${data.user.name}`);
+      setMessage("");
       setForm({ name: "", email: "", password: "", skills: "" });
     } catch (error) {
       setMessage(error.message);
