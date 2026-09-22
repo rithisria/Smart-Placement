@@ -1,0 +1,151 @@
+:root { --ink: #1d3834; --muted: #71807b; --paper: #f7f3eb; --card: #fffdf8; --line: #ded8cc; --orange: #d67845; --mint: #dfeee4; }
+
+.auth-layout { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr); background: var(--paper); }
+.intro-panel { position: relative; overflow: hidden; padding: clamp(44px, 9vw, 120px); display: flex; flex-direction: column; justify-content: center; background: var(--ink); color: #f7f3eb; }
+.intro-panel::after { content: ""; position: absolute; width: 420px; height: 420px; right: -180px; bottom: -160px; border: 1px solid #d6784555; border-radius: 50%; box-shadow: 0 0 0 44px #d6784510, 0 0 0 88px #d6784508; }
+.intro-panel h1 { position: relative; z-index: 1; max-width: 660px; margin: 22px 0; font: 500 clamp(46px, 6.2vw, 86px)/.96 Georgia, serif; letter-spacing: -2.5px; }
+.intro-copy { max-width: 470px; color: #b9ccc4; font-size: 17px; line-height: 1.65; }
+.feature-line { display: flex; gap: 15px; align-items: flex-start; margin-top: 38px; color: #f7f3eb; font-size: 14px; line-height: 1.35; }
+.feature-line > span { color: var(--orange); font: 18px Georgia, serif; }
+.feature-line small { color: #9db3aa; font-size: 12px; }
+.eyebrow { margin: 0; color: var(--orange); font-size: 11px; font-weight: 800; letter-spacing: 2.2px; }
+.stats-row { display: flex; gap: clamp(28px, 5vw, 70px); margin-top: 76px; color: #a8bdb5; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; }
+.stats-row strong { display: block; margin-bottom: 3px; color: #fffdf8; font: 32px Georgia, serif; letter-spacing: 0; }
+.auth-card { align-self: center; width: min(430px, calc(100% - 64px)); margin: auto; }
+.access-switch { display: flex; gap: 4px; margin: 30px 0 24px; padding: 4px; width: fit-content; background: #eee7dc; }
+.access-switch button { padding: 8px 16px; border: 0; background: transparent; color: var(--muted); font-size: 13px; }
+.access-switch button.active { background: var(--card); color: var(--ink); font-weight: 800; box-shadow: 0 2px 8px #1d383412; }
+.brand-logo { display: block; width: 180px; height: 48px; }
+.brand-button { padding: 0; border: 0; background: none; }
+.auth-card h2, .dashboard-heading h1, .applications-list h2 { margin: 14px 0 8px; color: var(--ink); font: 500 40px/1.05 Georgia, serif; letter-spacing: -1px; }
+.muted { color: var(--muted); }
+form { display: grid; gap: 12px; margin-top: 30px; }
+input { width: 100%; padding: 15px 16px; border: 1px solid var(--line); background: var(--card); color: #263238; border-radius: 3px; outline: none; transition: border-color .2s, box-shadow .2s; }
+input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px #d6784520; }
+.primary-button, .outline-button { border: 0; padding: 14px 19px; border-radius: 3px; font-weight: 800; transition: transform .2s, background .2s, border-color .2s; }
+.primary-button { background: var(--orange); color: #fffdf8; }
+.primary-button:hover { background: #b95e32; transform: translateY(-1px); }
+.text-button { padding: 16px 0; color: var(--ink); background: none; border: 0; font-size: 14px; }
+.text-button:hover { color: var(--orange); }
+.form-message, .notice { color: #a34f36; margin-top: 16px; font-size: 14px; }
+.app-shell { min-height: 100svh; background: var(--paper); padding: 0 max(22px, 7vw) 80px; }
+.topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+nav { display: flex; gap: 30px; height: 100%; }
+nav button { color: var(--muted); background: none; border: 0; border-bottom: 2px solid transparent; }
+nav small { color: var(--orange); }
+nav button:hover, nav button.active { color: var(--ink); border-color: var(--orange); }
+.profile-button { border: 0; background: none; color: var(--muted); font-size: 13px; }
+.profile-button span { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-right: 7px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 12px; }
+.dashboard-heading { display: flex; align-items: end; justify-content: space-between; padding: 84px 0 46px; }
+.dashboard-heading h1 { font-size: clamp(40px, 5.2vw, 68px); }
+.match-summary { display: flex; align-items: end; gap: 10px; color: var(--muted); }
+.match-summary strong { color: var(--orange); font: 50px Georgia, serif; line-height: .8; }
+.toolbar { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 22px; }
+.job-filters { display: flex; gap: 10px; align-items: center; flex-wrap: nowrap; }
+.deadline-filter { width: 150px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 3px; background: var(--card); color: var(--ink); font: inherit; }
+.section-label { margin: 0 0 5px; color: var(--ink); font-size: 11px; font-weight: 800; letter-spacing: 1.6px; }
+.search-input { width: min(330px, 100%); padding-block: 12px; background: #fffaf2; }
+.job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.job-group { margin-bottom: 42px; }
+.job-group h2 { margin: 0 0 16px; color: var(--ink); font: 500 28px Georgia, serif; }
+.job-group h2 small { color: var(--orange); font: 800 12px sans-serif; }
+.job-card { min-height: 330px; display: flex; flex-direction: column; padding: 27px; background: var(--card); border: 1px solid var(--line); transition: transform .2s, box-shadow .2s; }
+.job-card:hover { transform: translateY(-5px); box-shadow: 0 16px 30px #1d38341c; }
+.company-badge { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 27px; background: var(--mint); color: var(--ink); font: 20px Georgia, serif; }
+.company-logo { display: block; width: 32px; height: 32px; }
+.company-fallback { color: var(--ink); font: 20px Georgia, serif; }
+.company-wordmark { display: block; color: var(--ink); font-family: Arial, sans-serif; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+.ibm-mark { color: #1261a0; font-size: 15px; }
+.deloitte-mark { color: #86bc25; font-size: 11px; letter-spacing: -0.7px; }
+.deloitte-mark span { font-size: 22px; line-height: 0; vertical-align: -3px; }
+.card-topline { display: flex; align-items: flex-start; justify-content: space-between; }
+.card-topline .company-badge { margin-bottom: 0; }
+.score-badge { padding: 6px 8px; color: var(--muted); background: #f0e8dc; font-size: 11px; font-weight: 800; }
+.score-badge.strong { color: #287056; background: var(--mint); }
+.company-name { color: var(--orange); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; }
+.job-card h2, .application-row h2 { margin: 8px 0; color: var(--ink); font: 500 25px Georgia, serif; line-height: 1.12; }
+.job-meta { color: var(--muted); font-size: 14px; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 7px; margin: 22px 0; }
+.skill-list span { padding: 5px 8px; background: #f0e8dc; color: #66584d; font-size: 12px; }
+.skill-list span.matched { color: #287056; background: var(--mint); }
+.outline-button { width: 100%; display: flex; justify-content: space-between; margin-top: auto; background: transparent; border: 1px solid var(--line); color: var(--ink); }
+.outline-button:hover { border-color: var(--orange); background: #fff9f3; }
+.applications-list { max-width: 1080px; }
+.applications-list > h2 { margin-bottom: 34px; }
+.deadline { margin: 8px 0 0; color: var(--orange); font-size: 12px; font-weight: 800; }
+.profile-page { max-width: 900px; padding: 70px 0; }
+.profile-page > h2 { margin: 12px 0 8px; color: var(--ink); font: 500 50px Georgia, serif; }
+.profile-form { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+.profile-form label { display: grid; gap: 7px; color: var(--ink); font-size: 12px; font-weight: 800; }
+.profile-form .primary-button { grid-column: 1 / -1; justify-self: start; }
+.profile-resources { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 42px; margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line); align-items: start; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-top: 35px; padding-top: 25px; border-top: 1px solid var(--line); }
+.profile-links .section-label { width: 100%; }
+.profile-links a { color: var(--ink); font-weight: 800; text-decoration: none; border-bottom: 1px solid var(--orange); }
+.profile-links a:hover { color: var(--orange); }
+.application-row { padding: 0 0 18px; margin-bottom: 30px; border-bottom: 1px solid var(--line); }
+.application-heading { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 0; border: 0; background: none; color: var(--ink); text-align: left; }
+.application-heading > span:first-child { display: grid; gap: 8px; }
+.application-heading strong { font: 500 25px Georgia, serif; line-height: 1.12; }
+.application-heading-right { display: flex; align-items: center; gap: 14px; }
+.application-status { padding: 7px 12px; border: 1px solid var(--line); border-radius: 20px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.application-toggle { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); font-size: 20px; line-height: 1; }
+.status-pill { padding: 6px 10px; background: var(--mint); color: #287056; font-size: 12px; text-transform: capitalize; }
+.application-tracker { width: 100%; }
+.tracker-step { width: 100%; display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 17px 0; border: 0; border-top: 1px solid var(--line); background: none; color: var(--ink); text-align: left; }
+.step-number { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); font-size: 14px; }
+.step-content { display: grid; gap: 5px; }
+.step-content strong { font-size: 17px; font-weight: 500; }
+.step-content small { color: var(--muted); font-size: 12px; }
+.step-state { padding: 8px 13px; border: 1px solid var(--line); border-radius: 20px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.tracker-step.complete .step-number, .tracker-step.current .step-number { border-color: #287056; background: var(--mint); color: #287056; }
+.tracker-step.complete .step-state { border-color: #b8ded0; background: var(--mint); color: #287056; }
+.tracker-step.current .step-state { border-color: var(--ink); background: var(--ink); color: #fffdf8; }
+.tracker-step.failed .step-number { border-color: #d65b55; background: #fce1df; color: #bd3e39; }
+.tracker-step.failed .step-state { border-color: #efb5b1; background: #fce1df; color: #bd3e39; }
+.tracker-step:hover .step-content strong { color: var(--orange); }
+.empty-state { padding: 30px 0; color: var(--muted); }
+.profile-strip { display: flex; justify-content: space-between; gap: 30px; align-items: center; margin-top: 54px; padding: 25px 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.profile-strip h2 { margin: 8px 0 4px; color: var(--ink); font: 500 25px Georgia, serif; }
+.profile-skills { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; max-width: 55%; }
+.profile-skills span { padding: 7px 9px; color: #287056; background: var(--mint); font-size: 12px; }
+.profile-resources .skills-form, .profile-resources .resume-form { display: grid; gap: 10px; margin: 12px 0; }
+.profile-resources .resume-form { align-items: stretch; }
+.profile-resources .resume-form input, .profile-resources .skills-form input { width: 100%; min-width: 0; padding-block: 10px; }
+.profile-resources .skills-form .outline-button, .profile-resources .resume-form .outline-button { width: 100%; margin: 0; white-space: nowrap; }
+.profile-resources .profile-skills { justify-content: flex-start; max-width: none; }
+.modal-backdrop { position: fixed; z-index: 2; inset: 0; display: grid; place-items: center; padding: 20px; background: #193b37b8; backdrop-filter: blur(5px); }
+.job-modal { position: relative; width: min(560px, 100%); padding: 44px; background: var(--card); box-shadow: 0 20px 50px #193b3744; }
+.job-modal h2 { margin: 12px 0; color: var(--ink); font: 500 40px/1.05 Georgia, serif; }
+.modal-score { display: flex; align-items: baseline; gap: 8px; margin: 18px 0; line-height: 1.4; }
+.modal-score strong { color: var(--orange); font-size: 24px; }
+.modal-score span { color: var(--muted); }
+.description { margin: 25px 0; color: #59645f; line-height: 1.7; }
+.job-modal .primary-button { width: 100%; }
+.close-button { position: absolute; top: 12px; right: 15px; border: 0; background: none; color: var(--muted); font-size: 26px; }
+.application-form { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
+.application-form label { display: grid; gap: 7px; color: var(--ink); font-size: 13px; font-weight: 800; }
+.application-form select { width: 100%; padding: 13px 14px; border: 1px solid var(--line); border-radius: 3px; background: var(--card); color: var(--ink); font: inherit; }
+.application-form fieldset { display: grid; gap: 10px; margin: 4px 0 0; padding: 15px; border: 1px solid var(--line); }
+.application-form legend { padding: 0 6px; color: var(--ink); font-size: 13px; font-weight: 800; }
+.application-form .resume-choice { display: flex; grid-template-columns: none; align-items: flex-start; gap: 8px; font-weight: 500; }
+.application-form .resume-choice input { width: auto; margin: 2px 0 0; padding: 0; }
+.application-form > .primary-button { margin-top: 4px; }
+.admin-label { margin: 0; color: var(--orange); font-size: 11px; font-weight: 800; letter-spacing: 1.6px; }
+.admin-shell .dashboard-heading { max-width: 1120px; }
+.admin-grid { display: grid; grid-template-columns: minmax(280px, .75fr) minmax(0, 1.25fr); gap: 60px; max-width: 1120px; align-items: start; }
+.admin-form { margin: 0; padding: 28px; background: var(--card); border: 1px solid var(--line); }
+.admin-form h2, .admin-applications h2, .admin-job-list h2 { margin: 8px 0 25px; color: var(--ink); font: 500 30px Georgia, serif; }
+.admin-form textarea { width: 100%; min-height: 100px; padding: 15px 16px; border: 1px solid var(--line); background: var(--card); color: #263238; border-radius: 3px; font: inherit; resize: vertical; }
+.admin-form textarea:focus { border-color: var(--orange); outline: none; box-shadow: 0 0 0 3px #d6784520; }
+.admin-date { display: grid; gap: 7px; color: var(--ink); font-size: 12px; font-weight: 800; }
+.admin-date input { margin-top: 0; }
+.admin-applications { min-width: 0; }
+.admin-application { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 0; border-top: 1px solid var(--line); }
+.admin-application h3 { margin: 6px 0; color: var(--ink); font: 500 22px Georgia, serif; }
+.admin-application p { margin-block: 0; }
+.admin-application select { min-width: 145px; padding: 10px; border: 1px solid var(--line); border-radius: 3px; background: var(--card); color: var(--ink); }
+.admin-job-list { max-width: 1120px; margin-top: 60px; padding-top: 28px; border-top: 1px solid var(--line); }
+@media (max-width: 860px) { .admin-grid { grid-template-columns: 1fr; gap: 45px; } }
+@media (max-width: 900px) { .application-row { display: block; } .application-tracker { width: 100%; margin-top: 22px; } }
+@media (max-width: 760px) { .auth-layout { display: block; } .intro-panel { min-height: 54svh; padding: 48px 28px; } .intro-panel h1 { font-size: 50px; } .stats-row { margin-top: 42px; } .auth-card { padding: 55px 0; } .app-shell { padding-bottom: 50px; } .topbar { height: auto; padding: 20px 0; flex-wrap: wrap; gap: 20px; } nav { order: 3; width: 100%; height: 38px; } .dashboard-heading { padding: 55px 0 35px; display: block; } .match-summary { margin-top: 28px; } .toolbar, .profile-strip { display: block; } .job-filters { display: grid; margin-top: 18px; } .search-input, .deadline-filter { width: 100%; } .profile-skills { justify-content: flex-start; max-width: none; margin-top: 20px; } .profile-button { font-size: 0; } .profile-button span { margin: 0; } .job-modal { padding: 38px 25px 28px; } .resume-form { display: grid; } .resume-form input { min-width: 0; } .profile-form, .profile-resources { grid-template-columns: 1fr; } .profile-page { padding: 45px 0; } .profile-page > h2 { font-size: 40px; } .tracker-step { grid-template-columns: 36px minmax(0, 1fr) auto; gap: 10px; } .step-number { width: 36px; height: 36px; } .step-content strong { font-size: 15px; } .step-state { padding: 7px 9px; font-size: 11px; } }
